@@ -1,21 +1,21 @@
 Fail2ban với iptables.
 
-I. Fail2ban:
+###### I. Fail2ban:
 Trong khi sử dụng SSH để truy cập vào servers ta cần đảm bảo mật ở mức cao.SSH là một dịch vụ được các  người quản trị sử dụng thông qua mạng internet  việc này có thể gây nguy hiểm cho hệ thống. Bởi các hacker có thể sử dụng phương pháp tấn công vét cạn (brute force).
 Bất kì dịch vụ nào  giao tiếp với internet đều có thể tạo ra mối nguy hiểm cho hệ thống.Ta có thể thấy điều này thông qua việc đọc log của ssh,thống kê các phiên truy  nhập của người dùng(hoặc những đối tượng) đang cố gắng truy cập vào hệ thống thông qua ssh bằng một phương thức nào đó.
 
 Fail2ban là một dịch vụ có thể giảm thiểu vấn đề này bằng cách tạo ra các quy tắc mà có thể tự động thay đổi cấu hình tường lửa của bạn dựa trên một số được xác định trước cố gắng đăng nhập không thành công. Điều này sẽ cho phép các máy chủ của bạn để đáp ứng với những nỗ lực truy cập bất hợp pháp mà không có sự can thiệp từ  phía người quản trị.
 
-II. Cài đặt và sử dụng fail2ban:
+###### II. Cài đặt và sử dụng fail2ban:
 
-Trong bài này tôi  cài đặt và sử dụng fail2ban trên ubuntu14.04.
+Trong bài này tôi cài đặt và sử dụng fail2ban trên ubuntu14.04 thao tác với dịch vụ ssh.
 
 1. Mục tiêu:
- - Cấu hình thành công fail2ban trên ubuntu14.04
+ - Cấu hình thành công fail2ban trên ubuntu14.04.
  - Sử dụng fail2ban để giao tiếp với iptables
+ - Test tính năng block ip của fail2ban.
 
-2.Mô hình bài lab:
-3.Cấu hình :
+2.Cấu hình :
 
 - Cập nhật hệ thống trước khi cài đặt:
 ```
@@ -77,6 +77,6 @@ iptables -S
 ```
 - Với thông số các thông số đã thiếp lập như trên.Ta sẽ test thư tính năng của nó:
 
-Từ một máy cùng mạng với fail2ban server . Bạn thử  ssh và gõ sai mật khẩu.Kết quả sẽ như sau:
+Từ một máy cùng mạng với fail2ban server .Bạn thử  ssh và gõ sai mật khẩu.Kết quả sẽ như sau:
 <img src="http://i.imgur.com/pDnnzMR.png">
 
