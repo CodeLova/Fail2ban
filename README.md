@@ -80,3 +80,8 @@ iptables -S
 Từ một máy cùng mạng với fail2ban server .Bạn thử  ssh và gõ sai mật khẩu.Kết quả sẽ như sau:
 <img src="http://i.imgur.com/pDnnzMR.png">
 
+Như vậy, ta đã test được tính năng của Fail2ban với dịch vụ ssh.
+
+
+###### III. Thông tin tham khảo:
+<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-fail2ban-on-ubuntu-14-04">Link digitalocean</a>
